@@ -4,7 +4,8 @@ from colorama import init, Fore, Style
 
 init(autoreset=True)
 
-def display_weather(weather):
+def display_weather(weather, units):
+    unit_symbol = "°C" if units == "metric" else "°F" if units == "imperial" else "K"
     name = weather["name"]
     main = weather["main"]
     wind = weather["wind"]
@@ -27,8 +28,7 @@ def display_weather(weather):
     feels_color = temp_color
 
     weather_info = f"""
-        {Fore.CYAN}Weather in {name} {emoji}:{Style.RESET_ALL}
-        {temp_color}Temperature: {temp}°C{Style.RESET_ALL} (feels like {feels_color}{feels_like}°C{Style.RESET_ALL})
+        {Fore.CYAN}Weather in {name} {emoji}:{Style.RESET_ALL}        {temp_color}Temperature: {temp}{unit_symbol}{Style.RESET_ALL} (feels like {feels_color}{feels_like}{unit_symbol}{Style.RESET_ALL})
         {Fore.BLUE}Humidity: {main['humidity']}%{Style.RESET_ALL}
         {Fore.YELLOW}Condition: {description}{Style.RESET_ALL}
         {Fore.MAGENTA}Wind Speed: {wind['speed']} m/s{Style.RESET_ALL}
