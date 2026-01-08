@@ -41,7 +41,6 @@ weather_api/
 ├── display.py 
 ├── extras.py 
 ├── main.py 
-├── requirements.txt
 └── README.md
 ```
 
