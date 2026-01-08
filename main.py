@@ -7,7 +7,7 @@ def main():
 
     weather = get_weather(city, units)
     if weather:
-        display_weather(weather)
+        display_weather(weather, units)
 
 if __name__ == "__main__":
     main()
