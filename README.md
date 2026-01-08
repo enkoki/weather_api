@@ -28,6 +28,10 @@ python-dotenv
 ```bash
 pip install python-dotenv
 ```
+colorama
+```bash
+pip install colorama
+```
 
 ## Project Structure
 ```
